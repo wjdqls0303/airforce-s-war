@@ -29,7 +29,7 @@ public class Playermove : MonoBehaviour
 
     private void Update()
     {
-           
+        
     }
 
     private IEnumerator Fire()
