@@ -14,12 +14,13 @@ public class Playermove : MonoBehaviour
     [SerializeField]
     private Transform bulletPosition = null;
 
+    Vector3 moveVelocity = Vector3.zero;
     private Vector2 targetPosition = Vector2.zero;
     private Gamemanager gameManager = null;
     private Collider2D col = null;
     private SpriteRenderer spriteRenderer = null;
     private bool isDamaged = false;
-    void Start()
+    void Start() 
     {
         gameManager = FindObjectOfType<Gamemanager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -29,7 +30,16 @@ public class Playermove : MonoBehaviour
 
     private void Update()
     {
-        
+        if(transform.position.x > gameManager.MinPosition.x)
+        {
+            moveVelocity = new Vector2(-0.5f, 0);
+            transform.position += moveVelocity * 7 * Time.deltaTime;
+        }
+        if (transform.position.x < gameManager.MaxPosition.x)
+        {
+            moveVelocity = new Vector2(0.5f, 0);
+            transform.position += moveVelocity * 7 * Time.deltaTime;
+        }
     }
 
     private IEnumerator Fire()
