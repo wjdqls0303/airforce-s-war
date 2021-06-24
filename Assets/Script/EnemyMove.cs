@@ -82,8 +82,9 @@ public class EnemyMove : MonoBehaviour
     }
     public IEnumerator Dead()
     {
-        spriteRenderer.material.SetColor("_Color", new Color(0f, 0f, 0f, 0f));
         col.enabled = false;
+        animator.Play("enemy_airplain_destroy_1");
+        spriteRenderer.material.SetColor("_Color", new Color(0f, 0f, 0f, 0f));
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }

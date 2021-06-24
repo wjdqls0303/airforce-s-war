@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
+    [Header("점수")]
     [SerializeField]
     private Text textScore = null;
+    [Header("최대점수")]
     [SerializeField]
     private Text textHighscore = null;
+    [Header("체력")]
     [SerializeField]
     private Text textLife = null;
+    [Header("기본 적 리소스")]
     [SerializeField]
     private GameObject enemyairplainPrefab = null;
+    [Header("빠른 적 리소스")]
+    [SerializeField]
+    private GameObject enemyfastairplainPrefab = null;
 
     public Vector2 MinPosition { get; private set; }
     public Vector2 MaxPosition { get; private set; }
