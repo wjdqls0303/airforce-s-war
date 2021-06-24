@@ -21,4 +21,5 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

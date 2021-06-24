@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Playermove : MonoBehaviour
@@ -44,7 +42,7 @@ public class Playermove : MonoBehaviour
     private IEnumerator Fire()
     {
         GameObject bullet;
-        if(bulletPrefab != null)
+        if (bulletPrefab != null)
         {
             while (true)
             {
