@@ -5,8 +5,8 @@ using UnityEngine;
 public class BulletMove : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 50f;
-    private Gamemanager gamemanager = null;
+    protected float speed = 50f;
+    protected Gamemanager gamemanager = null;
     void Start()
     {
         gamemanager = FindObjectOfType<Gamemanager>();

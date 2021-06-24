@@ -45,7 +45,8 @@ public class Gamemanager : MonoBehaviour
         {
             delay = Random.Range(1f, 2f);
             positionX = Random.Range(-2.3f, 2.3f);
-            for(int i = 0; i < 5; i++)
+            Instantiate(enemyfastairplainPrefab, new Vector2(-positionX, 5f), Quaternion.identity);
+            for (int i = 0; i < 5; i++)
             {
                 Instantiate(enemyairplainPrefab, new Vector2(positionX, 5f), Quaternion.identity);
                 yield return new WaitForSeconds(0.5f);

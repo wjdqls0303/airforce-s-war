@@ -9,9 +9,9 @@ public class EnemyMove : MonoBehaviour
     [SerializeField]
     private int hp = 5;
     [SerializeField]
-    private float speed = 3f;
+    protected float speed = 3f;
 
-    private Gamemanager gameManager = null;
+    protected Gamemanager gameManager = null;
     private Animator animator = null;
     private Collider2D col = null;
     private SpriteRenderer spriteRenderer = null;
@@ -19,7 +19,7 @@ public class EnemyMove : MonoBehaviour
     private bool isDamaged = false;
     private bool isDead = false;
 
-    void Start()
+    protected virtual void Start()
     {
         gameManager = FindObjectOfType<Gamemanager>();
         animator = GetComponent<Animator>();
@@ -54,7 +54,6 @@ public class EnemyMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BulletMove bulletMove = null;
         if (isDead) return;
         if (collision.CompareTag("Bullet"))
         {

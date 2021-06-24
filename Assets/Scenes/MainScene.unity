@@ -524,6 +524,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7770417250653895783, guid: 473fad5c95825a344b6c2e50e099cfca, type: 3}
   m_PrefabInstance: {fileID: 7770417250019829570}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &708123430
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708123429}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 1.23}
+    newSize: {x: 0.96, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 1.23}
+  m_EdgeRadius: 0
 --- !u!50 &708123435
 Rigidbody2D:
   serializedVersion: 4
@@ -775,6 +801,7 @@ MonoBehaviour:
   textHighscore: {fileID: 69646541}
   textLife: {fileID: 316709772}
   enemyairplainPrefab: {fileID: 2593267332454136339, guid: b81ebb5ba895c6d4a8bfbec7008a3220, type: 3}
+  enemyfastairplainPrefab: {fileID: 5084758210531320672, guid: 983030b353209c4429dac74f9f71038d, type: 3}
 --- !u!4 &1701194471
 Transform:
   m_ObjectHideFlags: 0
@@ -1254,5 +1281,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3374570259289964576, guid: 473fad5c95825a344b6c2e50e099cfca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 473fad5c95825a344b6c2e50e099cfca, type: 3}

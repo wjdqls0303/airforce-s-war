@@ -15,7 +15,6 @@ public class Playermove : MonoBehaviour
     private Transform bulletPosition = null;
 
     Vector3 moveVelocity = Vector3.zero;
-    private Vector2 targetPosition = Vector2.zero;
     private Gamemanager gameManager = null;
     private Collider2D col = null;
     private SpriteRenderer spriteRenderer = null;
@@ -33,12 +32,12 @@ public class Playermove : MonoBehaviour
         if(transform.position.x > gameManager.MinPosition.x)
         {
             moveVelocity = new Vector2(-0.5f, 0);
-            transform.position += moveVelocity * 7 * Time.deltaTime;
+            transform.position += moveVelocity * 10 * Time.deltaTime;
         }
         if (transform.position.x < gameManager.MaxPosition.x)
         {
             moveVelocity = new Vector2(0.5f, 0);
-            transform.position += moveVelocity * 7 * Time.deltaTime;
+            transform.position += moveVelocity * 10 * Time.deltaTime;
         }
     }
 

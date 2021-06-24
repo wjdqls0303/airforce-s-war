@@ -11,8 +11,12 @@ public class GameOvreManager : MonoBehaviour
         textHighScore.text = string.Format("HIGHSCORE\n{0}", PlayerPrefs.GetInt("HIGHSCORE", 0));
     }
 
-    public void RetryButten()
+    public void RetryButton()
     {
         SceneManager.LoadScene("MainScene");
+    }
+    public void GiveUpButton()
+    {
+        Application.Quit();
     }
 }

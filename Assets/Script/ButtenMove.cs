@@ -7,7 +7,7 @@ public class ButtenMove : MonoBehaviour
     public bool LeftMove = false;
     public bool RightMove = false;
     Vector3 moveVelocity = Vector3.zero;
-    float speed = 7;
+    float speed = 10;
 
     void Update()
     {
