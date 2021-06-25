@@ -32,7 +32,7 @@ public class Gamemanager : MonoBehaviour
         MinPosition = new Vector2(-2.3f, -5f);
         MaxPosition = new Vector2(2.3f, 5f);
         StartCoroutine(Spwanenemy());
-        highscore = PlayerPrefs.GetInt("HIGHSCORE", 5);
+        highscore = PlayerPrefs.GetInt("HighScore", 5);
     }
 
     
@@ -60,7 +60,7 @@ public class Gamemanager : MonoBehaviour
         if(score > highscore)
         {
             highscore = score;
-            PlayerPrefs.SetInt("HIGHSCORE", highscore);
+            PlayerPrefs.SetInt("HighScore", highscore);
         }
         UpdateUI();
     }
@@ -75,8 +75,8 @@ public class Gamemanager : MonoBehaviour
     }
     public void UpdateUI()
     {
-        textScore.text = string.Format("SCORE {0}", score);
-        textLife.text = string.Format("LIFE {0}", life);
-        textHighscore.text = string.Format("HIGHSCORE {0}", highscore);
+        textScore.text = string.Format("Score {0}", score);
+        textLife.text = string.Format("Life {0}", life);
+        textHighscore.text = string.Format("HighScore {0}", highscore);
     }
 }
