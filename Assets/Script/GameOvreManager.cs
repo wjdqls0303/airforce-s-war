@@ -8,7 +8,7 @@ public class GameOvreManager : MonoBehaviour
     private Text textHighScore = null;
     void Start()
     {
-        textHighScore.text = string.Format("HIGHSCORE\n{0}", PlayerPrefs.GetInt("HIGHSCORE", 0));
+        textHighScore.text = string.Format("HIGHSCORE\n{0}", PlayerPrefs.GetInt("HighScore", 0));
     }
 
     public void RetryButton()
