@@ -27,12 +27,12 @@ public class Playermove : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.x > gameManager.MinPosition.x)
+        if(transform.position.x > Gamemanager.Instance.MinPosition.x)
         {
             moveVelocity = new Vector2(-0.5f, 0);
             transform.position += moveVelocity * 10 * Time.deltaTime;
         }
-        if (transform.position.x < gameManager.MaxPosition.x)
+        if (transform.position.x < Gamemanager.Instance.MaxPosition.x)
         {
             moveVelocity = new Vector2(0.5f, 0);
             transform.position += moveVelocity * 10 * Time.deltaTime;
@@ -62,7 +62,7 @@ public class Playermove : MonoBehaviour
 
     private IEnumerator Damage()
     {
-        gameManager.Dead();
+        Gamemanager.Instance.Dead();
         for(int i = 0; i < 5; i++)
         {
             spriteRenderer.enabled = false;

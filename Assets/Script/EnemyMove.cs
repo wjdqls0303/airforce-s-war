@@ -21,7 +21,6 @@ public class EnemyMove : MonoBehaviour
 
     protected virtual void Start()
     {
-        gameManager = FindObjectOfType<Gamemanager>();
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -39,15 +38,15 @@ public class EnemyMove : MonoBehaviour
     }
     private void CheckLimit()
     {
-        if (transform.position.y < gameManager.MinPosition.y)
+        if (transform.position.y < Gamemanager.Instance.MinPosition.y)
         {
             Destroy(gameObject);
         }
-        if (transform.position.x < gameManager.MinPosition.x - 2f)
+        if (transform.position.x < Gamemanager.Instance.MinPosition.x - 2f)
         {
             Destroy(gameObject);
         }
-        if (transform.position.x > gameManager.MaxPosition.x + 2f)
+        if (transform.position.x > Gamemanager.Instance.MaxPosition.x + 2f)
         {
             Destroy(gameObject);
         }
@@ -68,7 +67,7 @@ public class EnemyMove : MonoBehaviour
             }
             if (isDead) return;
             isDead = true;
-            gameManager.AddScore(score);
+            Gamemanager.Instance.AddScore(score);
             StartCoroutine(Dead());
         }
     }

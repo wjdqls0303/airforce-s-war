@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Gamemanager : MonoBehaviour
+public class Gamemanager : MonoSingleton<Gamemanager>
 {
     [Header("Á¡¼ö")]
     [SerializeField]
